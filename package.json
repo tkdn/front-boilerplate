@@ -1,0 +1,11 @@
+{
+  "name": "front-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:tkdn/front-boilerplate.git",
+  "author": "tkdn<tkdnation@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^2.2.1"
+  }
+}
