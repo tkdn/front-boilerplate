@@ -5,7 +5,7 @@
   "repository": "git@github.com:tkdn/front-boilerplate.git",
   "author": "tkdn<tkdnation@gmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "webpack": "^2.2.1"
   }
 }
