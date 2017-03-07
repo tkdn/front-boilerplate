@@ -2,8 +2,8 @@ const webpack = require('webpack')
 const Path = require('path')
 const entries = require('./webpack.entries')
 
-const __DEV__ = process.env.NODE_ENV != 'production' ? true : false
-const __PRD__ = process.env.NODE_ENV === 'production' ? true : false
+const __DEV__ = process.env.NODE_ENV != 'production'
+const __PRD__ = process.env.NODE_ENV === 'production'
 
 console.log('__DEV__', __DEV__)
 console.log('__PRD__', __PRD__)
