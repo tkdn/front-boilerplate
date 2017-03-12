@@ -6,7 +6,7 @@ function hoge () {
 
 hoge()
 
-class Hoge {
+export class Hoge {
   constructor (opt) {
     const defaults = {
       param1: null,
@@ -19,9 +19,9 @@ class Hoge {
   }
 }
 
-const instanceOfHoge = new Hoge({
+export const instanceOfHoge = new Hoge({
   param1: 'param1'
 })
 
-console.log(instanceOfHoge.getOptions())
-console.log($().jquery)
+// console.log(instanceOfHoge.getOptions())
+// console.log($().jquery)
