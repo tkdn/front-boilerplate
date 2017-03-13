@@ -12,7 +12,7 @@ export class Hoge {
       param1: null,
       param2: true
     }
-    this.config = Object.assign({}, defaults, opt)
+    this.config = $.extend({}, defaults, opt)
   }
   getOptions () {
     return this.config
