@@ -5,10 +5,6 @@ const entries = require('./webpack.entries')
 const __DEV__ = process.env.NODE_ENV != 'production'
 const __PRD__ = process.env.NODE_ENV === 'production'
 
-console.log('__DEV__', __DEV__)
-console.log('__PRD__', __PRD__)
-
-
 const webpackConfig = {
   devtool: __DEV__ ? 'inline-source-map' : false,
   entry: entries,
@@ -29,11 +25,11 @@ const webpackConfig = {
         test: /\.js$/,
         loader: 'babel-loader'
       },
-      {
-        test: /\.js$/,
-        loader: 'eslint-loader',
-        enforce: 'pre'
-      }
+      // {
+      //   test: /\.js$/,
+      //   loader: 'eslint-loader',
+      //   enforce: 'pre'
+      // }
     ],
   },
   plugins: (()=>{
