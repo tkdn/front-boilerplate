@@ -3,6 +3,7 @@ import { instanceOfHoge } from '../src/js/app'
 
 describe('tests group 1', () => {
   it('test 1', () => {
-    assert(instanceOfHoge.getOptions().param1 === 'param1')
+    const a = true
+    assert(a)
   })
 })
