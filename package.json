@@ -16,7 +16,6 @@
     "browser-sync": "^2.18.8",
     "coveralls": "^2.12.0",
     "cross-env": "^3.2.3",
-    "del": "^2.2.2",
     "eslint": "^3.16.1",
     "eslint-loader": "^1.6.3",
     "eslint-plugin-import": "^2.2.0",
@@ -39,17 +38,23 @@
     "power-assert": "^1.4.2",
     "pretty-hrtime": "^1.0.3",
     "require-dir": "^0.3.1",
+    "rimraf": "^2.6.1",
     "run-sequence": "^1.2.2",
     "sinon": "^2.1.0",
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.1",
-    "webpack-dev-server": "^2.4.1"
+    "webpack-dev-server": "^2.4.1",
+    "webpack-notifier": "^1.5.0"
   },
   "scripts": {
+    "clean": "rimraf ./app/css ./app/js ./app/coverage",
+    "prestart": "npm run clean",
     "start": "cross-env NODE_ENV=development gulp",
+    "prebuild": "npm run clean",
     "build": "cross-env NODE_ENV=production gulp build",
-    "pretest": "gulp clean",
-    "test": "cross-env NODE_ENV=test karma start --single-run"
+    "pretest": "npm run clean",
+    "test": "cross-env NODE_ENV=test karma start --single-run",
+    "test:watch": "cross-env NODE_ENV=test karma start"
   },
   "dependencies": {
     "jquery": "1.12"

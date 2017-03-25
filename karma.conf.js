@@ -45,7 +45,7 @@ module.exports = function(config) {
       file : './app/coverage/report/lcov.info'
     },
     /**
-     * @desc Travis で Yarn + Karma
+     * @desc Travis で Yarn + Karma + Chrome
      * @see http://malloc.hatenablog.jp/entry/2017/01/23/132638
      */
     browsers: ['Chrome'],
