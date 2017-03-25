@@ -1,8 +1,14 @@
+import $ from 'jquery'
+import UsersRequest from 'users/UsersRequest'
 import assert from 'power-assert'
-import { instanceOfHoge } from '../src/js/app'
 
-describe('tests group 1', () => {
-  it('test 1', () => {
-    assert(instanceOfHoge.getOptions().param1 === 'param1')
+describe('UsersRequest unit test group.', () => {
+
+  it('Users のレスポンスを受け取ることができる', () => {
+    const request = new UsersRequest().fetch()
+    request.done((data)=>{
+      assert($.isArray(data))
+    })
   })
+
 })
